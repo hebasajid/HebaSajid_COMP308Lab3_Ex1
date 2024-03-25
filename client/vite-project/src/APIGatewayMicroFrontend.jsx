@@ -1,7 +1,7 @@
 // APIGatewayMicroFrontend.js
 import React, { useEffect, useState } from 'react';
-import LoginUser from '../src/assets/components/LoginUser';
-import AddUser from '../src/assets/components/AddUser';
+import LoginUser from '../src/components/LoginUser.jsx';
+import AddUser from '../src/components/AddUser.jsx';
 
 function APIGatewayMicroFrontend() {
   const [vitals, setVitals] = useState(null);
