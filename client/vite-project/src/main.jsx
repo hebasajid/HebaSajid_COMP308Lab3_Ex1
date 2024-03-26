@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 //import App from './App.jsx'
-import App from './APIGatewayMicroFrontend.jsx'
 import './index.css'
+import VitalsMicroFrontEnd from './VitalsMicroFrontEnd'
 //
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <VitalsMicroFrontEnd />
+ 
   </React.StrictMode>,
 )

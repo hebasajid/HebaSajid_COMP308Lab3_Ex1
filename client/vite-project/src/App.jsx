@@ -52,14 +52,14 @@ function App() {
 
       <div>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="login" element={<LoginUser />} />
-          <Route path="createuser" element={<AddUser />} />
-          <Route path = "editvitals/:id" element={<EditVitals />} />
-          <Route path="addvitals" element={<AddVitals />} />
-          <Route path="listvitals" element={<ListVitals />} />
-          <Route path="vitalshome" element={<VitalsHome/>} />
+          <Route path="/"index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<LoginUser />} />
+          <Route path="/createuser" element={<AddUser />} />
+          <Route path = "/editvitals/:id" element={<EditVitals />} />
+          <Route path="/addvitals" element={<AddVitals />} />
+          <Route path="/listvitals" element={<ListVitals />} />
+          <Route path="/vitalshome" element={<VitalsHome/>} />
          
         </Routes>
       </div>
