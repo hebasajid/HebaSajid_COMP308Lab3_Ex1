@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const port = 3002;
 
-// Import Vitals Schema and Model
 const Vitals = require('../models/vitals-server-model');
 
 // Route to add a new vital

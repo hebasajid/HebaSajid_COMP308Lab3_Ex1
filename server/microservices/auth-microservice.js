@@ -4,14 +4,13 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 3003;
 
-// Import User Schema and Model
-console.log(__dirname); // Log the current directory
+console.log(__dirname); 
 const User = require('../models/user-server-model.js');
 
 // Route for user login
 app.post('/auth/login', async (req, res) => {
   try {
-    // Example logic: Check user credentials against the database
+  
     const { email, password } = req.body;
     const user = await User.findOne({ email });
 
@@ -19,13 +18,13 @@ app.post('/auth/login', async (req, res) => {
       return res.status(404).send('User not found');
     }
 
-    // Example logic: Check if password is correct
+   
     const isValidPassword = await user.isValidPassword(password);
     if (!isValidPassword) {
       return res.status(401).send('Invalid password');
     }
 
-    // If credentials are valid, send success response
+    
     res.send('User authenticated');
   } catch (error) {
     console.error('Error:', error);
@@ -36,7 +35,6 @@ app.post('/auth/login', async (req, res) => {
 // Route for user signup
 app.post('/auth/signup', async (req, res) => {
     try {
-      // Example logic: Create a new user document in the database
       const newUser = new User(req.body);
       await newUser.save();
       res.send('User registered successfully');

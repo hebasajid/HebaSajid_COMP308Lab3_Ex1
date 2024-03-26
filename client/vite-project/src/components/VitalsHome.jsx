@@ -26,7 +26,7 @@ function VitalsHome(props) {
     const { data: isLoggedInData, loading: isLoggedInLoading, error: isLoggedInError, refetch } = useQuery(LOGGED_IN_USER);
   
     useEffect(() => {
-      // If the refetch function is available, call it to get the updated data
+      
       if (refetch) {
         refetch();
       }

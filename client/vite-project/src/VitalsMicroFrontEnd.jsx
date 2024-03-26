@@ -12,17 +12,39 @@ function VitalsApp() {
     
   
     async function handleAddVitals() {
-        // Logic to toggle the visibility of the AddVitals component
-        setShowAddVitals(!showAddVitals);
+        try {
+            const response = await fetch('http://localhost:3000/vitals/add', {
+              method: 'POST',
+            });
+            const data = await response.text();
+            setShowAddVitals(data);
+          } catch (error) {
+            console.error('Error adding vital:', error);
+          }
+       
     }
 
     async function handleEditVitals() {
-        // Logic to toggle the visibility of the AddVitals component
-        setShowEditVitals(!showEditVitals);
+        try {
+            const response = await fetch('http://localhost:3000/vitals/:id', {
+              method: 'POST',
+            });
+            const data = await response.text();
+            setShowEditVitals(data);
+          } catch (error) {
+            console.error('Error editng vital:', error);
+          }
     }
     async function handleListVitals() {
-        // Logic to toggle the visibility of the AddVitals component
-        setShowListVitals(!showListVitals);
+        try {
+            const response = await fetch('http://localhost:3000/vitals', {
+              method: 'POST',
+            });
+            const data = await response.text();
+            setShowEditVitals(data);
+          } catch (error) {
+            console.error('Error adding vital:', error);
+          }
     }
   
     return (

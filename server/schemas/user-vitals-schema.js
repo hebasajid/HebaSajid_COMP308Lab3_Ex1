@@ -18,11 +18,6 @@ const jwt = require("jsonwebtoken");
 const JWT_SECRET = "some_secret_key"; // generate this elsewhere
 const jwtExpirySeconds = 300;
 
-// Create a GraphQL Object Type for Student model
-// The fields object is a required property of a GraphQLObjectType 
-// and it defines the different fields or query/mutations that are available
-// in this type.
-
 const userType = new GraphQLObjectType({
     name: 'user',
     fields: function () {
